@@ -51,7 +51,7 @@ require('./config/passport')(passport);
 
 app.disable('x-powered-by');
 
-app.set('port',port, g );
+app.set('port',port,  g  );
 orderDeliverySokert(io);
 
 //LLAMANDO A LAS RUTAS
@@ -62,13 +62,13 @@ producto(app);
 
 
 
-/* server.listen(3000, '192.168.0.101' || 'localhost', function(){
+/*  server.listen(3000, '192.168.1.3' || 'localhost', function(){
     console.log('Aplicaion de Nodejs '+ port + ' Iniciada...')
-}) */
+})  */
 
-server.listen(port, function(){
+ server.listen(port, function(){
     console.log('Aplicaion de Nodejs corriendo en '+ port + ' Iniciada...')
-}) 
+})  
 
 
 

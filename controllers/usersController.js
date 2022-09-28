@@ -44,8 +44,6 @@ module.exports = {
             }
 
             await User.actualizar(user);
-
-
             return res.status(201).json({
                 success: true,
                 message: 'Los datos del Usuario se actualizaron correctament',
@@ -158,7 +156,7 @@ module.exports = {
             if (User.isPasswordMatched(password, myuser.password)) {
 
                 const token = jwt.sign({ id: myuser.id, email: myuser.email }, keys.secretOrKey, {
-                    expiresIn:(60 *1)
+                    expiresIn:(240 *3)
                 });
                 const data = {
                     id: myuser.id,
