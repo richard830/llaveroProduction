@@ -7,11 +7,11 @@ const uuid = uuidv4();
 
 
 const storage = new Storage({
-    projectId: "flutter-mobil-curso",
+    projectId: "chicas-bc0ed",
     keyFilename: './serviceAccountKey.json'
 });
 
-const bucket = storage.bucket("gs://flutter-mobil-curso.appspot.com/");
+const bucket = storage.bucket("gs://chicas-bc0ed.appspot.com/");
 
 /**
  * Subir el archivo a Firebase Storage
@@ -19,7 +19,7 @@ const bucket = storage.bucket("gs://flutter-mobil-curso.appspot.com/");
  */
 module.exports = (file, pathImage, deletePathImage) => {
     return new Promise((resolve, reject) => {
-        
+
         console.log('delete path', deletePathImage)
         if (deletePathImage) {
 

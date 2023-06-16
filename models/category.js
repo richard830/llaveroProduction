@@ -14,8 +14,6 @@ Category.listarComboBox = (id_user) => {
 }
 
 
-
-
 Category.listarDATOS = (id) => {
     const sql = `
     SELECT
