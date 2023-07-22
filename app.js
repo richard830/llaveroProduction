@@ -65,7 +65,7 @@ password(app);
 
 
 server.listen(80, '172.26.3.211' || 'localhost', function() {
-    console.log('Aplicaion de Nodejs corriend en el puerto' + port + ' Iniciada...')
+    console.log('Aplicaion de Nodejs corriend en el puerto ' + port + ' Iniciada...')
 })
 
 /*  server.listen(port, function(){

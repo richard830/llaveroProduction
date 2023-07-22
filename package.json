@@ -2,9 +2,9 @@
     "name": "api",
     "version": "1.0.0",
     "description": "api de la aplicacion delivery",
-    "main": "server.js",
+    "main": "app.js",
     "scripts": {
-        "start": "node server.js"
+        "start": "node app.js"
     },
     "keywords": [
         "flutter",
