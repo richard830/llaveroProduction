@@ -1,9 +1,22 @@
-const CategoryController = require('../controllers/categoryController');
-const passport = require('passport');
+const CategoryController = require("../controllers/categoryController");
+const passport = require("passport");
 
 module.exports = (app) => {
-    app.post('/api/categoria/create', passport.authenticate('jwt', { session: false }), CategoryController.create);
-    app.get('/api/categoria/listar/:id_user', passport.authenticate('jwt', { session: false }), CategoryController.ListarCateg);
-    app.get('/api/categoria/listarxcategory/:id', CategoryController.ListarProductxIdCategory);
-    app.delete('/api/categoria/eliminar/:id', CategoryController.eliminarCategoria);
-}
+    app.get("/api/categoria/listar", CategoryController.ListarCategoria);
+    app.post("/api/categoria/create", CategoryController.create);
+    app.put("/api/categoria/actualizar", CategoryController.actualizarCategory);
+    app.delete(
+        "/api/categoria/eliminar/:id_categoria",
+        CategoryController.eliminarCategoria
+    );
+
+    app.get(
+        "/api/categoria/listarIdCategoria/:id_categoria",
+        CategoryController.ListarIdCategoria
+    );
+
+    app.delete(
+        "/api/categoria/eliminar/:id",
+        CategoryController.eliminarCategoria
+    );
+};

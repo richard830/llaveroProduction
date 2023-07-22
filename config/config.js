@@ -12,26 +12,26 @@ types.setTypeParser(1114, function(stringValue) {
 });
 
 const databaseConfig = {
-    'host': '127.0.0.1',
+    // 'host': '127.0.0.1',
+    // 'port': 5432,
+    // 'database': 'llave',
+    // 'user': 'postgres',
+    // 'password': '12345'
+
+    'host': 'security-richard.cmoskzwrbvmj.sa-east-1.rds.amazonaws.com',
     'port': 5432,
-    'database': 'foto',
+    'database': 'securityrichard',
     'user': 'postgres',
-    'password': '12345'
+    'password': '1314880749',
+    //ssl: true,
+    dialect: 'postgres',
+    // dialectOptions: {
+    //     "ssl": { "require": true }
+    // },
 
-    /*  'host': 'ec2-54-91-223-99.compute-1.amazonaws.com',
-      'port': 5432,
-      'database': 'da5ep84bba9tj8',
-      'user': 'lgfsqqkvqjzrrd',
-      'password': 'fbcdee880d1fac7cd23cb79eb19ffe0d1e0c6c13645e14f5557dd5a97ce759b8', 
-       ssl: true,
-       dialect: 'postgres',
-      dialectOptions: {
-      "ssl": {"require":true }
-      },
-
-      rejectUnauthorized: false,
-        requestCert: true,
-        agent: false   */
+    rejectUnauthorized: false,
+    requestCert: true,
+    agent: false
 
 
 };
